@@ -1,0 +1,28 @@
+opam-version: "2.0"
+maintainer: "Rizo I. <rizo@odis.io>"
+authors: "Rizo I. <rizo@odis.io>"
+homepage: "https://github.com/rizo/ason"
+bug-reports: "https://github.com/rizo/ason/issues"
+synopsis: "Yojson backend for ason"
+
+build: [
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+]
+
+depends: [
+  "ocaml"
+  "dune"
+  "odoc" {with-doc}
+  "ason"
+  "yojson"
+]

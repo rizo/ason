@@ -1,0 +1,3 @@
+(library
+ (public_name ason_yojson)
+ (libraries ason yojson))
