@@ -1,4 +1,4 @@
 module Basic : sig
-  module Encoder : Ason.Encoder.Extension with type json = Yojson.Basic.t
-  module Decoder : Ason.Decoder.Extension with type json = Yojson.Basic.t
+  module Encode : Ason.Encode.Extra with type json = Yojson.Basic.t
+  module Decode : Ason.Decode.Extra with type json = Yojson.Basic.t
 end
