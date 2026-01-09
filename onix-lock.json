@@ -3,7 +3,7 @@
    "repositories": [
      {
        "url": "https://github.com/ocaml/opam-repository.git",
-       "rev": "13d5334f87e9684897511adf5d1c6fffd36d66e9"
+       "rev": "c12c1ea9e7887cc07f2ab967d2eb85c54386ae57"
      }
    ],
    "packages" : {
@@ -55,10 +55,10 @@
        ]
      },
      "base": {
-       "version": "v0.17.0",
+       "version": "v0.17.3",
        "src": {
-         "url": "https://github.com/janestreet/base/archive/refs/tags/v0.17.0.tar.gz",
-         "sha512": "5828bfdad7e80183c4aa8b52e6ab06cc17c9f15cfbffc88827db8f8973a064813236d60b01358f838e58f2fea1f4499e6a7676bf081da443c1fb8a019d9fe7be"
+         "url": "https://github.com/janestreet/base/archive/refs/tags/v0.17.3.tar.gz",
+         "sha512": "628610caff7e124631870fa1e29661caac28bdfdb18750ee43b868037da3d65d6dd9023b4be7c4c52405679efb5e865a6632d95606a22b28a36636a6bf706ef3"
        },
        "depends": [
          "dune",
@@ -72,14 +72,25 @@
          "dune-configurator"
        ]
      },
-     "base-bytes": {
+     "base-bigarray": {
+       "version": "base"
+     },
+     "base-domains": {
        "version": "base",
        "depends": [
-         "ocaml",
-         "ocamlfind"
-       ],
-       "build-depends": [
-         "ocamlfind"
+         "ocaml"
+       ]
+     },
+     "base-effects": {
+       "version": "base",
+       "depends": [
+         "ocaml"
+       ]
+     },
+     "base-nnp": {
+       "version": "base",
+       "depends": [
+         "base-domains"
        ]
      },
      "base-threads": {
@@ -103,10 +114,10 @@
        ]
      },
      "chrome-trace": {
-       "version": "3.16.0",
+       "version": "3.20.2",
        "src": {
-         "url": "https://github.com/ocaml/dune/releases/download/3.16.0/dune-3.16.0.tbz",
-         "sha256": "5481dde7918ca3121e02c34d74339f734b32d5883efb8c1b8056471e74f9bda6"
+         "url": "https://github.com/ocaml/dune/releases/download/3.20.2/dune-3.20.2.tbz",
+         "sha256": "b1a86b2d60bdb4a8b9bb6861bdf2f9f28a6e7cb5d833ce81afecceb9ef9ca549"
        },
        "depends": [
          "dune",
@@ -117,20 +128,20 @@
        ]
      },
      "cmdliner": {
-       "version": "1.3.0",
+       "version": "2.1.0",
        "src": {
-         "url": "https://erratique.ch/software/cmdliner/releases/cmdliner-1.3.0.tbz",
-         "sha512": "4c46bc334444ff772637deae2f5ba03645d7a1b7db523470a1246acfce79b971c764d964cbb02388639b3161b279700d9ade95da550446fb32aa4849c8a8f283"
+         "url": "https://erratique.ch/software/cmdliner/releases/cmdliner-2.1.0.tbz",
+         "sha512": "2ca8c9a2b392e031f88aa0e76f2ab50c8e9e28d77852d04ca2d5b62326630ca41567ce0832e9a9334d9b130b48deede66c7880a9d0aee75a1afe7541097e249f"
        },
        "depends": [
          "ocaml"
        ]
      },
      "cppo": {
-       "version": "1.6.9",
+       "version": "1.8.0",
        "src": {
-         "url": "https://github.com/ocaml-community/cppo/archive/v1.6.9.tar.gz",
-         "sha512": "26ff5a7b7f38c460661974b23ca190f0feae3a99f1974e0fd12ccf08745bd7d91b7bc168c70a5385b837bfff9530e0e4e41cf269f23dd8cf16ca658008244b44"
+         "url": "https://github.com/ocaml-community/cppo/archive/v1.8.0.tar.gz",
+         "sha512": "3840725b767a0300bdc48f11d26d798bdcae0a764ed6798df3a08dfc8cc76fe124b14a19d47c9b5ea8e229d68b0311510afce77c0e4d9131fbda5116dc2689a2"
        },
        "depends": [
          "base-unix",
@@ -142,10 +153,10 @@
        ]
      },
      "crunch": {
-       "version": "3.3.1",
+       "version": "4.0.0",
        "src": {
-         "url": "https://github.com/mirage/ocaml-crunch/releases/download/v3.3.1/crunch-3.3.1.tbz",
-         "sha256": "2c5ba0d4110bcbb7731cba4eafb6c44a7487c3f88c1ad47401271b69ffa8ed6a"
+         "url": "https://github.com/mirage/ocaml-crunch/releases/download/v4.0.0/crunch-4.0.0.tbz",
+         "sha256": "939b8d1129ed6c634cb0f9ccc6f6d44aa1703cd05ce6091f2ee2a0162944b89b"
        },
        "depends": [
          "cmdliner",
@@ -172,10 +183,10 @@
        ]
      },
      "dune": {
-       "version": "3.16.0",
+       "version": "3.20.2",
        "src": {
-         "url": "https://github.com/ocaml/dune/releases/download/3.16.0/dune-3.16.0.tbz",
-         "sha256": "5481dde7918ca3121e02c34d74339f734b32d5883efb8c1b8056471e74f9bda6"
+         "url": "https://github.com/ocaml/dune/releases/download/3.20.2/dune-3.20.2.tbz",
+         "sha256": "b1a86b2d60bdb4a8b9bb6861bdf2f9f28a6e7cb5d833ce81afecceb9ef9ca549"
        },
        "depends": [
          "base-threads",
@@ -184,10 +195,10 @@
        ]
      },
      "dune-build-info": {
-       "version": "3.16.0",
+       "version": "3.20.2",
        "src": {
-         "url": "https://github.com/ocaml/dune/releases/download/3.16.0/dune-3.16.0.tbz",
-         "sha256": "5481dde7918ca3121e02c34d74339f734b32d5883efb8c1b8056471e74f9bda6"
+         "url": "https://github.com/ocaml/dune/releases/download/3.20.2/dune-3.20.2.tbz",
+         "sha256": "b1a86b2d60bdb4a8b9bb6861bdf2f9f28a6e7cb5d833ce81afecceb9ef9ca549"
        },
        "depends": [
          "dune",
@@ -198,10 +209,10 @@
        ]
      },
      "dune-configurator": {
-       "version": "3.16.0",
+       "version": "3.20.2",
        "src": {
-         "url": "https://github.com/ocaml/dune/releases/download/3.16.0/dune-3.16.0.tbz",
-         "sha256": "5481dde7918ca3121e02c34d74339f734b32d5883efb8c1b8056471e74f9bda6"
+         "url": "https://github.com/ocaml/dune/releases/download/3.20.2/dune-3.20.2.tbz",
+         "sha256": "b1a86b2d60bdb4a8b9bb6861bdf2f9f28a6e7cb5d833ce81afecceb9ef9ca549"
        },
        "depends": [
          "base-unix",
@@ -214,15 +225,16 @@
        ]
      },
      "dune-rpc": {
-       "version": "3.16.0",
+       "version": "3.20.2",
        "src": {
-         "url": "https://github.com/ocaml/dune/releases/download/3.16.0/dune-3.16.0.tbz",
-         "sha256": "5481dde7918ca3121e02c34d74339f734b32d5883efb8c1b8056471e74f9bda6"
+         "url": "https://github.com/ocaml/dune/releases/download/3.20.2/dune-3.20.2.tbz",
+         "sha256": "b1a86b2d60bdb4a8b9bb6861bdf2f9f28a6e7cb5d833ce81afecceb9ef9ca549"
        },
        "depends": [
          "csexp",
          "dune",
          "dyn",
+         "ocamlc-loc",
          "ordering",
          "pp",
          "stdune",
@@ -233,10 +245,10 @@
        ]
      },
      "dyn": {
-       "version": "3.16.0",
+       "version": "3.20.2",
        "src": {
-         "url": "https://github.com/ocaml/dune/releases/download/3.16.0/dune-3.16.0.tbz",
-         "sha256": "5481dde7918ca3121e02c34d74339f734b32d5883efb8c1b8056471e74f9bda6"
+         "url": "https://github.com/ocaml/dune/releases/download/3.20.2/dune-3.20.2.tbz",
+         "sha256": "b1a86b2d60bdb4a8b9bb6861bdf2f9f28a6e7cb5d833ce81afecceb9ef9ca549"
        },
        "depends": [
          "dune",
@@ -255,7 +267,8 @@
          "sha256": "bf674de3312dee7b7215f07df1e8a96eb3d679164b8a918cdd95b8d97e505884"
        },
        "depends": [
-         "dune"
+         "dune",
+         "ocaml"
        ],
        "build-depends": [
          "dune"
@@ -278,10 +291,10 @@
        ]
      },
      "fix": {
-       "version": "20230505",
+       "version": "20250919",
        "src": {
-         "url": "https://gitlab.inria.fr/fpottier/fix/-/archive/20230505/archive.tar.gz",
-         "sha512": "30d446ba6c19aef78b52d9831eb26f8f6ac10e88bd1eff36d16fbbfb32278b2637e31e63a160aec4abbbfdb1e7612ed25d68c936f4cbf2073e51d713ff3a8adf"
+         "url": "https://gitlab.inria.fr/fpottier/fix/-/archive/20250919/archive.tar.gz",
+         "sha512": "147bde60a96191f5f0090842df37a12509d78cf6e9dda482fbd000f61215c3d12115854fc331ae39009f26948d6d527187adade160e7ab27a6c4f0d8b324490a"
        },
        "depends": [
          "dune",
@@ -292,10 +305,10 @@
        ]
      },
      "fmt": {
-       "version": "0.9.0",
+       "version": "0.11.0",
        "src": {
-         "url": "https://erratique.ch/software/fmt/releases/fmt-0.9.0.tbz",
-         "sha512": "66cf4b8bb92232a091dfda5e94d1c178486a358cdc34b1eec516d48ea5acb6209c0dfcb416f0c516c50ddbddb3c94549a45e4a6d5c5fd1c81d3374dec823a83b"
+         "url": "https://erratique.ch/software/fmt/releases/fmt-0.11.0.tbz",
+         "sha512": "3f40155fc6a7315202e410585964307d63416c8001fd243667ed9d8d1a02b67deecacb25e9c2feb409c537bbdfb7817d91168de4ddd643532ff51d6c1c696a4a"
        },
        "depends": [
          "base-unix",
@@ -324,14 +337,44 @@
          "topkg"
        ]
      },
-     "host-arch-unknown": {
-       "version": "1"
+     "jsonrpc": {
+       "version": "1.23.1",
+       "src": {
+         "url": "https://github.com/ocaml/ocaml-lsp/releases/download/1.23.1/lsp-1.23.1.tbz",
+         "sha256": "c747e394026639ea204467e859de93ea8e9958dbf44f780dcb2a1897c56d7571"
+       },
+       "depends": [
+         "dune",
+         "ocaml",
+         "yojson"
+       ],
+       "build-depends": [
+         "dune"
+       ]
+     },
+     "lsp": {
+       "version": "1.23.1",
+       "src": {
+         "url": "https://github.com/ocaml/ocaml-lsp/releases/download/1.23.1/lsp-1.23.1.tbz",
+         "sha256": "c747e394026639ea204467e859de93ea8e9958dbf44f780dcb2a1897c56d7571"
+       },
+       "depends": [
+         "dune",
+         "jsonrpc",
+         "ocaml",
+         "ppx_yojson_conv_lib",
+         "uutf",
+         "yojson"
+       ],
+       "build-depends": [
+         "dune"
+       ]
      },
      "menhir": {
-       "version": "20231231",
+       "version": "20250912",
        "src": {
-         "url": "https://gitlab.inria.fr/fpottier/menhir/-/archive/20231231/archive.tar.gz",
-         "sha512": "620ff3443143535e03ac98c5e8ee2ddf9ba48f8cfe441302118def1da3e03ffac7f48d4d4cb129766b625ecad0fb341da1baa0169dee8b6d07a5b0bbb735cf2f"
+         "url": "https://gitlab.inria.fr/fpottier/menhir/-/archive/20250912/archive.tar.gz",
+         "sha512": "72c85ec63104d6a7c7b6305b4642b86909fcad2e46561427ad596e37e686b3c94cd382da440f058d32800a15b157b80a8242df8043440a209ba73d209657ea84"
        },
        "depends": [
          "dune",
@@ -345,10 +388,10 @@
        ]
      },
      "menhirCST": {
-       "version": "20231231",
+       "version": "20250912",
        "src": {
-         "url": "https://gitlab.inria.fr/fpottier/menhir/-/archive/20231231/archive.tar.gz",
-         "sha512": "620ff3443143535e03ac98c5e8ee2ddf9ba48f8cfe441302118def1da3e03ffac7f48d4d4cb129766b625ecad0fb341da1baa0169dee8b6d07a5b0bbb735cf2f"
+         "url": "https://gitlab.inria.fr/fpottier/menhir/-/archive/20250912/archive.tar.gz",
+         "sha512": "72c85ec63104d6a7c7b6305b4642b86909fcad2e46561427ad596e37e686b3c94cd382da440f058d32800a15b157b80a8242df8043440a209ba73d209657ea84"
        },
        "depends": [
          "dune",
@@ -359,10 +402,10 @@
        ]
      },
      "menhirLib": {
-       "version": "20231231",
+       "version": "20250912",
        "src": {
-         "url": "https://gitlab.inria.fr/fpottier/menhir/-/archive/20231231/archive.tar.gz",
-         "sha512": "620ff3443143535e03ac98c5e8ee2ddf9ba48f8cfe441302118def1da3e03ffac7f48d4d4cb129766b625ecad0fb341da1baa0169dee8b6d07a5b0bbb735cf2f"
+         "url": "https://gitlab.inria.fr/fpottier/menhir/-/archive/20250912/archive.tar.gz",
+         "sha512": "72c85ec63104d6a7c7b6305b4642b86909fcad2e46561427ad596e37e686b3c94cd382da440f058d32800a15b157b80a8242df8043440a209ba73d209657ea84"
        },
        "depends": [
          "dune",
@@ -373,10 +416,10 @@
        ]
      },
      "menhirSdk": {
-       "version": "20231231",
+       "version": "20250912",
        "src": {
-         "url": "https://gitlab.inria.fr/fpottier/menhir/-/archive/20231231/archive.tar.gz",
-         "sha512": "620ff3443143535e03ac98c5e8ee2ddf9ba48f8cfe441302118def1da3e03ffac7f48d4d4cb129766b625ecad0fb341da1baa0169dee8b6d07a5b0bbb735cf2f"
+         "url": "https://gitlab.inria.fr/fpottier/menhir/-/archive/20250912/archive.tar.gz",
+         "sha512": "72c85ec63104d6a7c7b6305b4642b86909fcad2e46561427ad596e37e686b3c94cd382da440f058d32800a15b157b80a8242df8043440a209ba73d209657ea84"
        },
        "depends": [
          "dune",
@@ -387,10 +430,10 @@
        ]
      },
      "merlin-lib": {
-       "version": "4.16-501",
+       "version": "5.6-503",
        "src": {
-         "url": "https://github.com/ocaml/merlin/releases/download/v4.16-501/merlin-4.16-501.tbz",
-         "sha256": "da5bf309b040645c292ae4572cc6a0a700dbd2bcfc996ac13c8e5c3836c21e26"
+         "url": "https://github.com/ocaml/merlin/releases/download/v5.6-503/merlin-5.6-503.tbz",
+         "sha256": "b0dcad092aaaf7a23f65ab9a089e8761bd665cc72357909e0ac6c2182f4fc2d4"
        },
        "depends": [
          "csexp",
@@ -402,42 +445,77 @@
        ]
      },
      "ocaml": {
-       "version": "5.1.1",
+       "version": "5.3.0",
        "depends": [
-         "ocaml-config",
-         "ocaml-system"
+         "ocaml-base-compiler",
+         "ocaml-config"
        ],
        "build-depends": [
-         "ocaml-system"
+         "ocaml-base-compiler"
        ]
+     },
+     "ocaml-base-compiler": {
+       "version": "5.3.0",
+       "depends": [
+         "ocaml-compiler"
+       ]
+     },
+     "ocaml-compiler": {
+       "version": "5.3.0",
+       "src": {
+         "url": "https://github.com/ocaml/ocaml/releases/download/5.3.0/ocaml-5.3.0.tar.gz",
+         "sha256": "22c1dd9de21bf43b62d1909041fb5fad648905227bf69550a6a6bef31e654f38"
+       },
+       "src-extra": {
+         "ocaml-compiler.install": {
+           "url": "https://raw.githubusercontent.com/ocaml/ocaml/899b8f3bece45f55161dad72eaa223c2bb7202e8/ocaml-variants.install",
+           "sha256": "7af3dc34e6f9f3be2ffd8d32cd64fa650d6a036c86c4821a7033d24a90fba11c"
+         }
+       }
      },
      "ocaml-config": {
        "version": "3",
        "src-extra": {
          "gen_ocaml_config.ml.in": {
-           "url": "https://raw.githubusercontent.com/ocaml/opam-source-archives/main/patches/ocaml-config/gen_ocaml_config.ml.in.3",
+           "url": "https://raw.githubusercontent.com/ocaml/ocaml/66f33f6e08857f3c3cb53fc1759fbad6860c59bd/tools/opam/gen_ocaml_config.ml.in",
            "sha256": "a9ad8d84a08961159653a978db92d10f694510182b206cacb96d5c9f63b5121e"
          },
          "ocaml-config.install": {
-           "url": "https://raw.githubusercontent.com/ocaml/opam-source-archives/main/patches/ocaml-config/ocaml-config.install",
+           "url": "https://raw.githubusercontent.com/ocaml/ocaml/363fb9f5a2fb87dbd5f8cc579af87dd04e14343b/tools/opam/ocaml-config.install",
            "sha256": "6e4fd93f4cce6bad0ed3c08afd0248dbe7d7817109281de6294e5b5ef5597051"
          }
        },
        "depends": [
-         "ocaml-system"
+         "ocaml-base-compiler"
        ],
        "build-depends": [
-         "ocaml-system"
+         "ocaml-base-compiler"
+       ]
+     },
+     "ocaml-index": {
+       "version": "5.6-503",
+       "src": {
+         "url": "https://github.com/ocaml/merlin/releases/download/v5.6-503/merlin-5.6-503.tbz",
+         "sha256": "b0dcad092aaaf7a23f65ab9a089e8761bd665cc72357909e0ac6c2182f4fc2d4"
+       },
+       "depends": [
+         "dune",
+         "merlin-lib",
+         "ocaml"
+       ],
+       "build-depends": [
+         "dune"
        ]
      },
      "ocaml-lsp-server": {
-       "version": "1.17.0",
+       "version": "1.23.1",
        "src": {
-         "url": "https://github.com/ocaml/ocaml-lsp/releases/download/1.17.0/lsp-1.17.0.tbz",
-         "sha256": "8fb8bbd717eefd2608b4d83458105b660e0de3a1134dc8fc216ae659d4d19600"
+         "url": "https://github.com/ocaml/ocaml-lsp/releases/download/1.23.1/lsp-1.23.1.tbz",
+         "sha256": "c747e394026639ea204467e859de93ea8e9958dbf44f780dcb2a1897c56d7571"
        },
        "depends": [
          "astring",
+         "base",
          "camlp-streams",
          "chrome-trace",
          "csexp",
@@ -446,6 +524,8 @@
          "dune-rpc",
          "dyn",
          "fiber",
+         "jsonrpc",
+         "lsp",
          "merlin-lib",
          "ocaml",
          "ocamlc-loc",
@@ -456,7 +536,6 @@
          "re",
          "spawn",
          "stdune",
-         "uutf",
          "xdg",
          "yojson"
        ],
@@ -464,26 +543,14 @@
          "dune"
        ]
      },
-     "ocaml-system": {
-       "version": "5.1.1",
-       "src-extra": {
-         "gen_ocaml_config.ml.in": {
-           "url": "https://raw.githubusercontent.com/ocaml/opam-source-archives/main/patches/ocaml-system/gen_ocaml_config.ml.in",
-           "sha256": "71bcd3d35e28cbf71eda81991c8741268f4b87ced71573b2e75f64f136cebfc1"
-         }
-       },
-       "depends": [
-         "host-arch-unknown"
-       ],
-       "depexts": [
-         "ocaml-ng.ocamlPackages_5_1.ocaml"
-       ]
+     "ocaml-options-vanilla": {
+       "version": "1"
      },
      "ocaml-version": {
-       "version": "3.6.7",
+       "version": "4.0.3",
        "src": {
-         "url": "https://github.com/ocurrent/ocaml-version/releases/download/v3.6.7/ocaml-version-3.6.7.tbz",
-         "sha256": "d50ffd5b669d33edb0d889c476a71de4888d90008d58336038d210ced28f810c"
+         "url": "https://github.com/ocurrent/ocaml-version/releases/download/v4.0.3/ocaml-version-4.0.3.tbz",
+         "sha512": "199533647516b1bea700046437c3b1f0d605e593c4bfd3b694f16944a6bfdba44297a45d696da1742c57bc621ecaafa2237cb3dc379f66f7fa2e1b2d93743022"
        },
        "depends": [
          "dune",
@@ -494,10 +561,10 @@
        ]
      },
      "ocaml_intrinsics_kernel": {
-       "version": "v0.17.0",
+       "version": "v0.17.1",
        "src": {
-         "url": "https://github.com/janestreet/ocaml_intrinsics_kernel/archive/refs/tags/v0.17.0.tar.gz",
-         "sha512": "e197202f6af364caf864efda5d7496416c30bdc3ade9bf0e81e17014f1a046daee21897fc9d47fc4fa44408b1466cf8cff38831b5df45468f3f4a15723d75aac"
+         "url": "https://github.com/janestreet/ocaml_intrinsics_kernel/archive/refs/tags/v0.17.1.tar.gz",
+         "sha512": "21e596d6407a620866cee7cab47ef1a9446d6a733b4994e809ea5566d5fa956682a5c6a6190ffb0ed48458abd658301944ed10c4389d91ecb8df677a5f87f2ab"
        },
        "depends": [
          "dune",
@@ -508,20 +575,20 @@
        ]
      },
      "ocamlbuild": {
-       "version": "0.14.3",
+       "version": "0.16.1",
        "src": {
-         "url": "https://github.com/ocaml/ocamlbuild/archive/refs/tags/0.14.3.tar.gz",
-         "sha512": "def8fa1d5488905fda31f72b7f6f0ebdccefa55a8e984a6ea4a7c1e0856e8ea1f7814410202e0f7f7d5e72aca7e8ae0d6623f7f2bade78b0dd82155de76ec4e5"
+         "url": "https://github.com/ocaml/ocamlbuild/archive/refs/tags/0.16.1.tar.gz",
+         "sha512": "e918b9a0081f271e507c7a4f4d5d5a7cdf818ca51c52acec1bac85ddad5f6cad078cb3c568252fbcf5401c2d75323ed8f50fdd881bda1c9632840320408393ae"
        },
        "depends": [
          "ocaml"
        ]
      },
      "ocamlc-loc": {
-       "version": "3.16.0",
+       "version": "3.20.2",
        "src": {
-         "url": "https://github.com/ocaml/dune/releases/download/3.16.0/dune-3.16.0.tbz",
-         "sha256": "5481dde7918ca3121e02c34d74339f734b32d5883efb8c1b8056471e74f9bda6"
+         "url": "https://github.com/ocaml/dune/releases/download/3.20.2/dune-3.20.2.tbz",
+         "sha256": "b1a86b2d60bdb4a8b9bb6861bdf2f9f28a6e7cb5d833ce81afecceb9ef9ca549"
        },
        "depends": [
          "dune",
@@ -533,29 +600,24 @@
        ]
      },
      "ocamlfind": {
-       "version": "1.9.6",
+       "version": "1.9.8",
        "src": {
-         "url": "http://download.camlcity.org/download/findlib-1.9.6.tar.gz",
-         "sha512": "cfaf1872d6ccda548f07d32cc6b90c3aafe136d2aa6539e03143702171ee0199add55269bba894c77115535dc46a5835901a5d7c75768999e72db503bfd83027"
-       },
-       "src-extra": {
-         "0001-Harden-test-for-OCaml-5.patch": {
-           "url": "https://raw.githubusercontent.com/ocaml/opam-source-archives/main/patches/ocamlfind/0001-Harden-test-for-OCaml-5.patch",
-           "sha256": "6fcca5f2f7abf8d6304da6c385348584013ffb8602722a87fb0bacbab5867fe8"
-         }
+         "url": "https://github.com/ocaml/ocamlfind/archive/refs/tags/findlib-1.9.8.tar.gz",
+         "sha512": "8967986de2ab4ec5993f437b0a4206742adf37aa7a292a3bba0a04438d78539b84d001191e60b2d5bde98a695b38cba2593b7051f7749adbdb964a0df3c4b661"
        },
        "depends": [
          "ocaml"
        ]
      },
      "ocamlformat": {
-       "version": "0.26.2",
+       "version": "0.28.1",
        "src": {
-         "url": "https://github.com/ocaml-ppx/ocamlformat/releases/download/0.26.2/ocamlformat-0.26.2.tbz",
-         "sha256": "2e4f596bf7aa367a844fe83ba0f6b0bf14b2a65179ddc082363fe9793d0375c5"
+         "url": "https://github.com/ocaml-ppx/ocamlformat/releases/download/0.28.1/ocamlformat-0.28.1.tbz",
+         "sha256": "70bda037d0bed961ed91bdb5198b2eeef542444750a8b015d80ccb94b3ff41fb"
        },
        "depends": [
          "cmdliner",
+         "csexp",
          "dune",
          "ocaml",
          "ocamlformat-lib",
@@ -566,15 +628,16 @@
        ]
      },
      "ocamlformat-lib": {
-       "version": "0.26.2",
+       "version": "0.28.1",
        "src": {
-         "url": "https://github.com/ocaml-ppx/ocamlformat/releases/download/0.26.2/ocamlformat-0.26.2.tbz",
-         "sha256": "2e4f596bf7aa367a844fe83ba0f6b0bf14b2a65179ddc082363fe9793d0375c5"
+         "url": "https://github.com/ocaml-ppx/ocamlformat/releases/download/0.28.1/ocamlformat-0.28.1.tbz",
+         "sha256": "70bda037d0bed961ed91bdb5198b2eeef542444750a8b015d80ccb94b3ff41fb"
        },
        "depends": [
          "astring",
          "base",
          "camlp-streams",
+         "cmdliner",
          "csexp",
          "dune",
          "dune-build-info",
@@ -587,7 +650,6 @@
          "ocaml",
          "ocaml-version",
          "ocp-indent",
-         "result",
          "stdio",
          "uuseg",
          "uutf"
@@ -598,10 +660,10 @@
        ]
      },
      "ocamlformat-rpc-lib": {
-       "version": "0.26.2",
+       "version": "0.28.1",
        "src": {
-         "url": "https://github.com/ocaml-ppx/ocamlformat/releases/download/0.26.2/ocamlformat-0.26.2.tbz",
-         "sha256": "2e4f596bf7aa367a844fe83ba0f6b0bf14b2a65179ddc082363fe9793d0375c5"
+         "url": "https://github.com/ocaml-ppx/ocamlformat/releases/download/0.28.1/ocamlformat-0.28.1.tbz",
+         "sha256": "70bda037d0bed961ed91bdb5198b2eeef542444750a8b015d80ccb94b3ff41fb"
        },
        "depends": [
          "csexp",
@@ -613,13 +675,12 @@
        ]
      },
      "ocp-indent": {
-       "version": "1.8.1",
+       "version": "1.9.0",
        "src": {
-         "url": "https://github.com/OCamlPro/ocp-indent/archive/1.8.1.tar.gz",
-         "sha512": "565353de333dd44375366fff75e85a6256c3cd9ff52b3db79803141f975e77cda04dfe32f5e0f2d4c82c59be8f04e9c2bf4d066b113b2cdf267f4c3dcfa401da"
+         "url": "https://github.com/OCamlPro/ocp-indent/releases/download/1.9.0/ocp-indent-1.9.0.tbz",
+         "sha256": "da4ff552f9fc230d7c07f64a8ef89295907bf8d3c581132f05dcf0dd87a172b3"
        },
        "depends": [
-         "base-bytes",
          "cmdliner",
          "dune",
          "ocaml",
@@ -631,10 +692,10 @@
        ]
      },
      "odoc": {
-       "version": "2.4.2",
+       "version": "3.1.0",
        "src": {
-         "url": "https://github.com/ocaml/odoc/releases/download/2.4.2/odoc-2.4.2.tbz",
-         "sha256": "563cfdbb26ec8a30e737a9cf285a06e0bbae953f48e25bbb0f69f7a99c2ba40b"
+         "url": "https://github.com/ocaml/odoc/releases/download/3.1.0/odoc-3.1.0.tbz",
+         "sha256": "355b3cfff4934903cbaed8b51ce35e333e8609932d230294200a9f2d42ffa914"
        },
        "depends": [
          "astring",
@@ -645,7 +706,6 @@
          "fpath",
          "ocaml",
          "odoc-parser",
-         "result",
          "tyxml"
        ],
        "build-depends": [
@@ -654,27 +714,26 @@
        ]
      },
      "odoc-parser": {
-       "version": "2.4.2",
+       "version": "3.1.0",
        "src": {
-         "url": "https://github.com/ocaml/odoc/releases/download/2.4.2/odoc-2.4.2.tbz",
-         "sha256": "563cfdbb26ec8a30e737a9cf285a06e0bbae953f48e25bbb0f69f7a99c2ba40b"
+         "url": "https://github.com/ocaml/odoc/releases/download/3.1.0/odoc-3.1.0.tbz",
+         "sha256": "355b3cfff4934903cbaed8b51ce35e333e8609932d230294200a9f2d42ffa914"
        },
        "depends": [
          "astring",
          "camlp-streams",
          "dune",
-         "ocaml",
-         "result"
+         "ocaml"
        ],
        "build-depends": [
          "dune"
        ]
      },
      "ordering": {
-       "version": "3.16.0",
+       "version": "3.20.2",
        "src": {
-         "url": "https://github.com/ocaml/dune/releases/download/3.16.0/dune-3.16.0.tbz",
-         "sha256": "5481dde7918ca3121e02c34d74339f734b32d5883efb8c1b8056471e74f9bda6"
+         "url": "https://github.com/ocaml/dune/releases/download/3.20.2/dune-3.20.2.tbz",
+         "sha256": "b1a86b2d60bdb4a8b9bb6861bdf2f9f28a6e7cb5d833ce81afecceb9ef9ca549"
        },
        "depends": [
          "dune",
@@ -685,10 +744,10 @@
        ]
      },
      "pp": {
-       "version": "1.2.0",
+       "version": "2.0.0",
        "src": {
-         "url": "https://github.com/ocaml-dune/pp/releases/download/1.2.0/pp-1.2.0.tbz",
-         "sha256": "a5e822573c55afb42db29ec56eacd1f2acd8f65cf2df2878e291de374ce6909c"
+         "url": "https://github.com/ocaml-dune/pp/releases/download/2.0.0/pp-2.0.0.tbz",
+         "sha256": "8651351518b092b4a2def4e08171c276152f92fb6a84a8b19b6b929ccdb44419"
        },
        "depends": [
          "dune",
@@ -714,10 +773,10 @@
        ]
      },
      "ptime": {
-       "version": "1.1.0",
+       "version": "1.2.0",
        "src": {
-         "url": "https://erratique.ch/software/ptime/releases/ptime-1.1.0.tbz",
-         "sha512": "309b8383f61b58840e58a82802ec8fbc61b7cc95a4590d38ad427e484cbaaf66f03fa8e6484b5b6855468a87e745aed103bf6f1041ec05062230a9fa5fb86cc6"
+         "url": "https://erratique.ch/software/ptime/releases/ptime-1.2.0.tbz",
+         "sha512": "b0c3240dd9e777a5e60b5269eb2e312fc644d29ef55e257d2f2538c03bf62274173ed36e13858c44d2dbee8fe375c9c483e705706e4aa5b3b5c4609ca6324a5c"
        },
        "depends": [
          "ocaml"
@@ -729,25 +788,10 @@
        ]
      },
      "re": {
-       "version": "1.11.0",
+       "version": "1.14.0",
        "src": {
-         "url": "https://github.com/ocaml/ocaml-re/releases/download/1.11.0/re-1.11.0.tbz",
-         "sha256": "01fc244780c0f6be72ae796b1fb750f367de18624fd75d07ee79782ed6df8d4f"
-       },
-       "depends": [
-         "dune",
-         "ocaml",
-         "seq"
-       ],
-       "build-depends": [
-         "dune"
-       ]
-     },
-     "result": {
-       "version": "1.5",
-       "src": {
-         "url": "https://github.com/janestreet/result/releases/download/1.5/result-1.5.tbz",
-         "sha256": "7c3a5e238558f4c1a4f5acca816bc705a0e12f68dc0005c61ddbf2e6cab8ee32"
+         "url": "https://github.com/ocaml/ocaml-re/archive/refs/tags/1.14.0.tar.gz",
+         "sha512": "cd2cc39f951ca6b7be631bbb5531ed13bc040e629842671bf6fef3911b20ef1653fa9a1f0aa23b094d252cffc9a9efe7ffca69e50d362ab935bc0cc447548124"
        },
        "depends": [
          "dune",
@@ -788,10 +832,10 @@
        ]
      },
      "spawn": {
-       "version": "v0.15.1",
+       "version": "v0.17.0",
        "src": {
-         "url": "https://github.com/janestreet/spawn/archive/v0.15.1.tar.gz",
-         "sha256": "9afdee314fab6c3fcd689ab6eb5608d6b78078e6dede3953a47debde06c19d50"
+         "url": "https://github.com/janestreet/spawn/releases/download/v0.17.0/spawn-v0.17.0.tbz",
+         "sha256": "33fbb5cd4c3387a6829095cfa73d5fc2eff572be61647e6052010bfbd0c2df49"
        },
        "depends": [
          "dune",
@@ -817,10 +861,10 @@
        ]
      },
      "stdune": {
-       "version": "3.16.0",
+       "version": "3.20.2",
        "src": {
-         "url": "https://github.com/ocaml/dune/releases/download/3.16.0/dune-3.16.0.tbz",
-         "sha256": "5481dde7918ca3121e02c34d74339f734b32d5883efb8c1b8056471e74f9bda6"
+         "url": "https://github.com/ocaml/dune/releases/download/3.20.2/dune-3.20.2.tbz",
+         "sha256": "b1a86b2d60bdb4a8b9bb6861bdf2f9f28a6e7cb5d833ce81afecceb9ef9ca549"
        },
        "depends": [
          "base-unix",
@@ -836,10 +880,10 @@
        ]
      },
      "topkg": {
-       "version": "1.0.7",
+       "version": "1.1.1",
        "src": {
-         "url": "https://erratique.ch/software/topkg/releases/topkg-1.0.7.tbz",
-         "sha512": "09e59f1759bf4db8471f02d0aefd8db602b44932a291c05c312b1423796e7a15d1598d3c62a0cec7f083eff8e410fac09363533dc4bd2120914bb9664efea535"
+         "url": "https://erratique.ch/software/topkg/releases/topkg-1.1.1.tbz",
+         "sha512": "c36c549a362ddf5b7fe3f6ff91c79b7ab531c43633bb9737576370bcbd69db7e1625d247c278a869b503d45a175e9753231ccf595e5bfa4e3b7e2602ac3d3b42"
        },
        "depends": [
          "ocaml",
@@ -868,10 +912,10 @@
        ]
      },
      "uucp": {
-       "version": "15.1.0",
+       "version": "17.0.0",
        "src": {
-         "url": "https://erratique.ch/software/uucp/releases/uucp-15.1.0.tbz",
-         "sha512": "998f94fadb72357b15a3042a3d11c31b3e16f281822673f2defdd515cd1394d55de1817628be8bd5c030175f9e62c53630d4139a1c0253800f9fb898b0f11364"
+         "url": "https://erratique.ch/software/uucp/releases/uucp-17.0.0.tbz",
+         "sha512": "c2b5c883c2ed1ee8e7bc9102339dfbca5940e68cd2af59a10abc827fb64c91ad03f85cfc12d4c79605c10e9b3a90743267af8b069143fefeeff6658ec8ed843f"
        },
        "depends": [
          "cmdliner",
@@ -884,10 +928,10 @@
        ]
      },
      "uuseg": {
-       "version": "15.1.0",
+       "version": "17.0.0",
        "src": {
-         "url": "https://erratique.ch/software/uuseg/releases/uuseg-15.1.0.tbz",
-         "sha512": "1e9460dc5a856c985d40c61fd1560bdfdb8bbaf8d7430405814589b47d4a7f7869658d1e3198c7a9132412e9b4b85402ceb4bda5040da426b69e9aef4222a23a"
+         "url": "https://erratique.ch/software/uuseg/releases/uuseg-17.0.0.tbz",
+         "sha512": "8d81ca0a57516b94c66a0da256f3455ba26b0875ca9e354a665ec30223c9216be57abdd52c39c8c384fe127df8060c18ff07d92d4d9f53892bc4ed20699df3ef"
        },
        "depends": [
          "cmdliner",
@@ -902,10 +946,10 @@
        ]
      },
      "uutf": {
-       "version": "1.0.3",
+       "version": "1.0.4",
        "src": {
-         "url": "https://erratique.ch/software/uutf/releases/uutf-1.0.3.tbz",
-         "sha512": "50cc4486021da46fb08156e9daec0d57b4ca469b07309c508d5a9a41e9dbcf1f32dec2ed7be027326544453dcaf9c2534919395fd826dc7768efc6cc4bfcc9f8"
+         "url": "https://erratique.ch/software/uutf/releases/uutf-1.0.4.tbz",
+         "sha512": "e35f408bc971cd8da3077e6c3321e0d8f4eb569898e0e219fde62dae78fbd0a0095cb7f036287656f6a1b346584f7b9f0c6dec0a5a092180da36e43247027598"
        },
        "depends": [
          "cmdliner",
@@ -918,10 +962,10 @@
        ]
      },
      "xdg": {
-       "version": "3.16.0",
+       "version": "3.20.2",
        "src": {
-         "url": "https://github.com/ocaml/dune/releases/download/3.16.0/dune-3.16.0.tbz",
-         "sha256": "5481dde7918ca3121e02c34d74339f734b32d5883efb8c1b8056471e74f9bda6"
+         "url": "https://github.com/ocaml/dune/releases/download/3.20.2/dune-3.20.2.tbz",
+         "sha256": "b1a86b2d60bdb4a8b9bb6861bdf2f9f28a6e7cb5d833ce81afecceb9ef9ca549"
        },
        "depends": [
          "dune",
@@ -932,15 +976,14 @@
        ]
      },
      "yojson": {
-       "version": "2.2.1",
+       "version": "3.0.0",
        "src": {
-         "url": "https://github.com/ocaml-community/yojson/releases/download/2.2.1/yojson-2.2.1.tbz",
-         "sha256": "cd3c1d94f695899a026dff72696989bdb10dc1632934bb9cbe6f4598d4afa6d4"
+         "url": "https://github.com/ocaml-community/yojson/releases/download/3.0.0/yojson-3.0.0.tbz",
+         "sha256": "99414da7609b92a02474ef4b49ecda15edc8cbba5229341b124e7e4695c39610"
        },
        "depends": [
          "dune",
-         "ocaml",
-         "seq"
+         "ocaml"
        ],
        "build-depends": [
          "dune"
