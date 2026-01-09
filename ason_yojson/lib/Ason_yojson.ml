@@ -88,20 +88,20 @@ module Basic = struct
 
     let rec lookup_field name0 fields =
       match fields with
-      | [] -> `Null
-      | (name, value) :: _ when String.equal name name0 -> value
+      | [] -> None
+      | (name, value) :: _ when String.equal name name0 -> Some value
       | _ :: obj' -> lookup_field name0 obj'
 
     let field ?default name decode json =
       match json with
       | `Assoc fields -> (
           match lookup_field name fields with
-          | `Null -> (
+          | None -> (
               match default with
               | None ->
                   Error (Ason.Decode.field_error name Ason.Decode.not_found)
               | Some x -> Ok x)
-          | non_null -> decode non_null)
+          | Some field_json -> decode field_json)
       | _ ->
           Error (Ason.Decode.field_error name (Ason.Decode.type_error "object"))
 
